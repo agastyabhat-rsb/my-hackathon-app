@@ -12,8 +12,3 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
-```
-
-**Step 3:** Open `.gitignore` and add at the bottom:
-```
-.env.local
