@@ -1,1 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  --bg-primary: #F0F2F5;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --border: rgba(0,0,0,0.07);
+  --text-primary: #0D1117;
+  --text-secondary: #4A5568;
+  --text-muted: #9AA5B4;
+  --accent: #00B4A0;
+  --accent-soft: rgba(0,180,160,0.08);
+  --accent-border: rgba(0,180,160,0.2);
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  --shadow-hover: 0 4px 24px rgba(0,0,0,0.1);
+  --grid-color: rgba(0,0,0,0.03);
+}
+
+.dark {
+  --bg-primary: #080C14;
+  --bg-secondary: #0D1320;
+  --bg-card: #111827;
+  --border: rgba(255,255,255,0.06);
+  --text-primary: #E8EDF5;
+  --text-secondary: #8892A4;
+  --text-muted: #4A5568;
+  --accent: #00D4AA;
+  --accent-soft: rgba(0,212,170,0.08);
+  --accent-border: rgba(0,212,170,0.2);
+  --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+  --shadow-hover: 0 4px 24px rgba(0,212,170,0.08);
+  --grid-color: rgba(255,255,255,0.02);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+.tag-accent {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
