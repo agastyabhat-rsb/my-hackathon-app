@@ -9,7 +9,8 @@ const ALLOWED_EMAILS = [
   "agastyabhat.2@gmail.com",
   "agamjot08@gmail.com",
   "bhatshhloka@gmail.com",
-  "rupa23.bhat@gmail.com"
+  "rupa23.bhat@gmail.com",
+  "srikant.bhat@gmail.com"
 ]
 
 export default function Login() {

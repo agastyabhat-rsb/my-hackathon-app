@@ -78,7 +78,7 @@ function NavBar() {
         { href: "/about", label: "about" },
         { href: "/projects", label: "projects" },
         { href: "/wallet", label: "wallet" },
-        { href: "/notes", label: "notes" },
+        { href: "/tracker", label: "tracker" },
       ].map(({ href, label }) => (
         <Link key={href} href={href} style={{
           fontFamily: "'IBM Plex Mono', monospace",
